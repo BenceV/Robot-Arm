@@ -16,15 +16,16 @@ public class SetConfig : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //Working implementation starts here
-        l0.gameObject.transform.Rotate(new Vector3(1, 0, 0), rotations[0]);
+        l0.gameObject.transform.Rotate(new Vector3(0, 1, 0), rotations[0]);
         l1.gameObject.transform.Rotate(new Vector3(1, 0, 0), rotations[1]);
-        l2.gameObject.transform.Rotate(new Vector3(0, 0, 1), rotations[2]);
+        l2.gameObject.transform.Rotate(new Vector3(1, 0, 0), rotations[2]);
 
 
         //Working implementation ends here
     }
     void Update()
     {
+
 
     }
 
