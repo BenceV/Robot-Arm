@@ -53,8 +53,8 @@ public class Controll : MonoBehaviour
 
         prev_joint_angles = new float[] { 0,0,0};
 
-        P = new float[] { 5000, 100, 100 };
-        D = new float[] { 100, 175, 75 };
+        P = new float[] { 5000, 5000, 5000 };
+        D = new float[] { 10, 10, 10 };
     }
 
     // Update is called once per frame
@@ -114,20 +114,20 @@ public class Controll : MonoBehaviour
 
         //Apply torques
         motor0.force = Math.Abs(torques[0] * (float)0.1);
-        motor0.targetVelocity = Math.Sign(torques[0])*150;
+        motor0.targetVelocity = Math.Sign(torques[0])*10;
         motor0.freeSpin = false;
         hinge0.motor = motor0;
         hinge0.useMotor = true;
 
 
-        motor1.force = Math.Abs(torques[1] * (float)0.5);
-        motor1.targetVelocity = Math.Sign(torques[1])*150;
+        motor1.force = Math.Abs(torques[1] * (float)0.1);
+        motor1.targetVelocity = Math.Sign(torques[1])*50;
         motor1.freeSpin = false;
         hinge1.motor = motor1;
         hinge1.useMotor = true;
 
-        motor2.force = Math.Abs(torques[2] * (float)0.5);
-        motor2.targetVelocity = Math.Sign(torques[2])*150;
+        motor2.force = Math.Abs(torques[2] * (float)0.1);
+        motor2.targetVelocity = Math.Sign(torques[2])*50;
         motor2.freeSpin = false;
         hinge2.motor = motor2;
         hinge2.useMotor = true;
